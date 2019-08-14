@@ -19,9 +19,12 @@ public class Exer02 extends HttpServlet{
 		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter(); 
 		
+		String nome = req.getParameter("nome"); 
+		String sobrenome = req.getParameter("sobrenome");
+		
 		out.println("<html><body>");
-		out.println("<h3>João Pedro Alb. Dos Santos</h3>");
-		out.println("<p>Av. Tomás de Souza, 433, São Paulo-SP</p>");
+		out.println("<h3>"+nome+"</h3>");
+		out.println("<p>"+sobrenome+"</p");
 		out.println("</body></html>");
 		out.flush();
 		out.close();
