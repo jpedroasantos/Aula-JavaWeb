@@ -15,29 +15,43 @@ import br.com.fiap.hotel.model.entities.Usuario;
 
 @WebServlet(urlPatterns = "/usuario")
 public class UsuarioServlet extends HttpServlet{
-	private static final long serialVersionUID = 1L;
-
+	private static final long serialVersionUID = 1l;
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) 
 			throws ServletException, IOException {
 		resp.setContentType("text/html");
-		PrintWriter out = resp.getWriter(); 
+		PrintWriter out = resp.getWriter();
 		
-		String nome = req.getParameter("nome"); 
+		String nome = req.getParameter("nome");
 		String login = req.getParameter("login");
-		String senha = req.getParameter("senha"); 
+		String senha = req.getParameter("senha");
 		
 		Usuario usuario = new Usuario(nome, login, senha);
-		out.println("<html><body>"); 
+		
+		out.println("<html><body>");
+		
 		if(new UsuarioBO().validarUsuario(usuario)) {
 			new UsuarioDAO().adicionar(usuario);
-			out.println("<h2>Usuário "+usuario.getNome()+" criado com sucesso.</h2>");
+			out.println("<h2>Usuário " + usuario.getNome() + " criado com sucesso.</h2>");
+			
 		} else {
-			out.println("<h2 style=\"color:red;\">É preciso informar todos os campos do usuário</h2>");
+			out.println("<h2 style=\"color:red;\"> É preciso "
+					+ "informar todos os campos do usuário</h2>");
 		}
-		out.println("<a href=\"index.html\">Voltar para a Home</a>");	
+		
+		out.println("<a href=\"index.html\">Voltar para Home</a>");
 		out.println("</body></html>");
-		out.flush(); 
+		out.flush();
 		out.close();
+		
 	}
 }
+
+
+
+
+
+
+
+

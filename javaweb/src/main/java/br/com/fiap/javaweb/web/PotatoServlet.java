@@ -15,17 +15,19 @@ public class PotatoServlet extends HttpServlet {
 	private static final long serialVersionUID = 2129182049581199200L;
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
+			throws ServletException, IOException {
 		resp.setContentType("text/html");
-		PrintWriter out = resp.getWriter();
 
 		String palavra = req.getParameter("palavra");
 
+		PrintWriter out = resp.getWriter();
 		out.println("<html><body>");
-		out.println("<h1>Potato</h1>");
-		out.println("A palavra é: " + palavra + "<p>");
+		out.println("<h1>POTATO</h1>");
+		out.println("<h2> A palavra digitada foi: " + palavra + "</h2>");
 		out.println("</body></html>");
 		out.flush();
 		out.close();
 	}
+
 }

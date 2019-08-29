@@ -9,10 +9,10 @@ public class ReservaDAO {
 	
 	public void adicionar(Reserva r) {
 		if(r != null) reservas.add(r);
-	} 
+	}
 	
 	public ArrayList<Reserva> consultarTodasReservas() {
-		return ReservaDAO.reservas;
+		return reservas;
 	}
 	
 	public Reserva consultarReservaQuarto(long nroQuarto) {
@@ -20,8 +20,8 @@ public class ReservaDAO {
 			if(r.getNroQuarto() == nroQuarto) {
 				return r;
 			}
-		} 
+		}
 		return null;
 	}
-	
+
 }
