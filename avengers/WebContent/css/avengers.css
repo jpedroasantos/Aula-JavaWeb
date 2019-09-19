@@ -1,0 +1,112 @@
+.container-pq {
+  display: none;
+}
+
+.bg {
+  background-image: url("../img/avenger.jpg");
+}
+
+.bg2 {
+  background-image: url("../img/bg2.jpg");
+  background-repeat: no-repeat;
+}
+
+.bg1 {
+  /* background-image: url("../img/bg.jpg"); */
+  background-color: #000;
+}
+
+.logo {
+  display: block;
+  margin: 30px auto;
+  width: 250px;
+  height: 150px;
+}
+
+.cadastro,
+.login,
+.entrada,
+.saida {
+  display: block;
+  margin: auto;
+}
+
+.form-control {
+  opacity: 0.8;
+}
+
+.btnCadastrar,
+.btnLogin {
+  display: block;
+  margin: 10px auto;
+}
+
+.btnEntrada {
+  margin-right: 450px;
+  margin-top: 30px;
+}
+
+.btnSaida {
+  margin-top: 30px;
+  float: left;
+}
+
+.desc_input {
+  color: #fff;
+}
+
+#erroNome,
+#erroEmail,
+#erroSenha,
+#erroConfirmaSenha {
+  color: lightcoral;
+}
+
+.erro {
+  border: 3px solid ;
+  color: #000;
+}
+
+.sucesso {
+  border: 3px solid;
+  color: #000;
+}
+
+#form-geral {
+  margin-top: 50px;
+}
+
+
+/* -------------------MOBILE------------------------------------------------ */
+
+@media(max-width: 813px) {
+  .container{
+      display: none;
+  }
+
+  .bg2 {
+    background-image: url("../img/bg2-pq.jpg");
+    background-repeat: no-repeat;
+  }
+  
+  .container-pq{
+     width: 100%;
+     display: block;
+     margin: 0px;
+     padding-left: 20px;
+     padding-right: 20px;
+ }
+
+ #form-geral {
+  margin-top: 150px;
+}
+
+.inputPlaca-pq{
+  margin-top: -120px;
+}
+
+.btnEntrada {
+  margin-right: 450px;
+  margin-top: 30px;
+}
+
