@@ -22,14 +22,14 @@ public class UsuarioDAO {
 		return stmt.executeUpdate();
 	} 
 	
-	public int addUser(Usuario u) throws Exception{
+	public int addUser(Usuario u) throws Exception{ 
 		stmt = con.prepareStatement("INSERT INTO "
 				+ "TBA_USUARIO(ID_USUARIO, NM_USUARIO, EMAIL_USUARIO, PWD_USUARIO)"
-				+ "VALUES(c_usuario_seq.nextval,?,?,?)");  
-		stmt.setInt(1, u.getId_usuario());
-		stmt.setString(2, u.getNome_usuario());
-		stmt.setString(3, u.getEmail_usuario()); 
-		stmt.setString(4, u.getSenha_usuario());
+				+ "VALUES(c_usuario_seq.nextval ,?,?,?)");  
+		//stmt.setInt(1, u.getId_usuario());
+		stmt.setString(1, u.getNome_usuario());
+		stmt.setString(2, u.getEmail_usuario()); 
+		stmt.setString(3, u.getSenha_usuario());
 		return stmt.executeUpdate();
 	}
 

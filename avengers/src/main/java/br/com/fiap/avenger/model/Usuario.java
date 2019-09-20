@@ -2,9 +2,9 @@ package br.com.fiap.avenger.model;
 
 public class Usuario {
 	private int id_usuario;
-	public String nome_usuario;
-	public String email_usuario;
-	public String senha_usuario;
+	private String nome_usuario;
+	private String email_usuario;
+	private String senha_usuario;
 	
 	public Usuario() {
 	
